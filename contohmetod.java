@@ -5,7 +5,7 @@ public class contohmetod {
 
     public static void main(String[] args) {
         int sisi = 10;
-        int luas = hitungluaspersegi();
+        int luas = hitungluaspersegi(sisi);
         System.out.println("Luas persegi dengan sisi " + sisi + "adalah" + luas);
 
     }
