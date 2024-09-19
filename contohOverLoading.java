@@ -20,7 +20,7 @@ public class contohOverLoading {
         double luasPersegiPanjang = hitungLuas(4, 6);
         System.out.println("luas persegi panjang : " + luasPersegiPanjang);
 
-        double luasLingkaran = hitungluas(4. true);
+        double luasLingkaran = hitungluas(4, true);
         System.out.println("luas lingkaran : " + luasLingkaran);
     }
 

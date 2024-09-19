@@ -1,25 +1,32 @@
 public class denganMethod {
     public static void main(String[] args) {
-        int gajipokok = 5000000;
-        int tunjangaTransport = 500000;
+        int gajiPokok = 5000000;
+        int tunjanganTransport = 500000;
         int tunjanganMakan = 300000;
         int bonus = 1000000;
 
-        int totalpenghasilan = hitungtotalpenghasilan(gajipokok,tunjangaTransport,tunjanganMakan, bonus);
-        int pajak = hitungpajak(totalpenghasilan);
-        int gajiBersih = hitungGajiBersih(totalpenghasilan, pajak);
+        int totalPenghasilan = hitungTotalPenghasilan(gajiPokok, tunjanganTransport, tunjanganMakan, bonus);
+        int pajak = hitungPajak(totalPenghasilan);
+        int gajiBersih = hitungGajiBersih(totalPenghasilan, pajak);
 
-        tampilkandetailgaji(gajipokok, tunjangaTransport, tunjanganMakan, bonus,pajak, gajiBersih);
+
+        tampilkanDetailGaji(gajiPokok, tunjanganTransport, tunjanganMakan, bonus, pajak, gajiBersih);
     }
-    public static int hitungtotalpenghasilan(int gajipokok, int tunjanganTransport, int tunjanganMakan, int bonus){
-        return gajipokok+ tunjanganTransport + tunjanganMakan + bonus;
+
+    public static int hitungTotalPenghasilan(int gajiPokok, int tunjanganTransport, int tunjanganMakan, int bonus) {
+        return gajiPokok + tunjanganTransport + tunjanganMakan + bonus;
     }
-    public static int hitungpajak(int totalpenghasilan){
-        return totalpenghasilan * 10 / 100;
+
+    public static int hitungPajak(int totalPenghasilan) {
+        return totalPenghasilan * 10 / 100;
 
     }
-    public static int hitungGajiBersih(int gajipokok, int tunjanganTransport, int tunjanganMakan, int bonus, int pajak, int gajibersih){
-        System.out.println("gaji pokok : " + gajipokok);
+    public static int hitungGajiBersih(int totalPenghasilan, int pajak){
+        return totalPenghasilan - pajak;
+    }
+
+    public static void tampilkanDetailGaji(int gajiPokok, int tunjanganTransport, int tunjanganMakan, int bonus, int pajak, int gajibersih) {
+        System.out.println("gaji pokok : " + gajiPokok);
         System.out.println("tunjangan Transport :" + tunjanganTransport);
         System.out.println("tunjangan Makan : " + tunjanganMakan);
         System.out.println("bonus : " + bonus);
@@ -27,3 +34,4 @@ public class denganMethod {
         System.out.println("Gaji bersih : " + gajibersih);
     }
 }
+
